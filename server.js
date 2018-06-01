@@ -8,6 +8,7 @@ hbs.registerPartials(__dirname + '/views/partials');
 //setting the view engine to hbs for express
 app.set('view engine', 'hbs');
 
+// middleware that logs server actions (keeps track of how the server is working)
 app.use((req, res, next) => {
     var now = new Date().toString();
     var log = `${now}: ${req.method} ${req.url}`
@@ -29,6 +30,7 @@ app.use((req, res, next) => {
 // setting up static files (html, css, js, images); all static files can be served from this folder
 app.use(express.static(__dirname + '/public'));
 
+// hbs helper that returns the current year with the new date method
 hbs.registerHelper('getCurrentYear', () => {
     return new Date().getFullYear()
 });
