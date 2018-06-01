@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Maintenance</title>
+</head>
+
+<body>
+    <h1>We'll be right back.</h1>
+    <p>The site is currently being updated.</p>
+</body>
+
+</html>
+
+{{!-- alternate way that works --}}
+    {{!-- server.js --}}
+        {{!-- app.use('/maintenance', (req, res) => { res.render('maintenance.hbs', { pageHeader: `We'll be right back.`, maintenanceMessage:
+        `The sit is currently being updated, we'll be back soon.`, }); }); --}}
+    {{!-- maintenance --}}
+        {{!-- <body>
+            <h1>{{pageHeader}}</h1>
+            <p>{{maintenanceMessage}}</p>
+        </body> --}}
