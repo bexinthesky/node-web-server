@@ -58,6 +58,7 @@ app.get('/about', (req, res) => {
     });
 });
 
+// routing for projects page
 app.get('/projects', (req, res) => {
     res.render('projects.hbs', {
         pageTitle: 'Projects'
